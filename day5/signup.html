@@ -9,30 +9,34 @@
     <h1>Signup page</h1>
     <form action="" method="">
         <label for="username">Username</label>
-        <input id="username" placeholder="write your name"/>
+        <input id="username" placeholder="write your name" required/>
       </form> 
       <br>
 
       <form action="" method=""> 
       <label for="Email">Email</label>
-        <input id="Email" placeholder="Enter Email"/>
+        <input type="Email" placeholder="Enter Email" required/>
       </form>
        <br>
 
       <form action="" method="">  
       <label for="Password">Password</label>
-      <input id="password" placeholder="Enter Password"/>
+      <input type="password" placeholder="Enter Password" required/>
      </form>
 
     <br>
 
     <form action="" method="">  
       <label for=" confirm Password"> confirm Password</label>
-        <input id=" confirm password" placeholder="conf Password"/>
+      <input type="password" placeholder="conf Password" required/>
     </form>
-    
+
     <br>
-    
+    <label>
+        <input type="checkbox" name="Remember"> Remember me
+    </label><br>
+    <br>
+    <button type="submit">signup</button>
 <a href="login.html" > Please Login</a>
 </body>
 </html>
