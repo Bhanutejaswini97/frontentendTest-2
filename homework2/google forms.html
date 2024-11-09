@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application - [Your Company Name]</title>
+</head>
+<body>
+
+    <h1>Job Application - TCS</h1>
+    <p>Thank you for your interest in applying for a position with TCS. Please fill out the following application form. We look forward to reviewing your application.</p>
+
+    <form action="your-form-handling-script.php" method="post" enctype="multipart/form-data">
+        <!-- Full Name -->
+        <label for="full-name">Full Name:</label><br>
+        <input type="text" id="full-name" name="full-name" required><br><br>
+
+        <!-- Email Address -->
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <!-- Position Applying For -->
+        <label for="position">Position Applying For:</label><br>
+        <select id="position" name="position" required>
+            <option value="job1">Job Title 1</option>
+            <option value="job2">Job Title 2</option>
+            <option value="job3">Job Title 3</option>
+        </select><br><br>
+
+        <!-- Resume Upload -->
+        <label for="resume">Upload Resume (PDF/Word):</label><br>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+
+        <!-- Cover Letter -->
+        <label for="cover-letter">Cover Letter:</label><br>
+        <textarea id="cover-letter" name="cover-letter" rows="4" cols="50" required></textarea><br><br>
+
+        <!-- Work Experience -->
+        <label for="experience">Relevant Work Experience:</label><br>
+        <textarea id="experience" name="experience" rows="4" cols="50" required></textarea><br><br>
+
+        <!-- Education Level -->
+        <label for="education">Highest Level of Education:</label><br>
+        <select id="education" name="education" required>
+            <option value="highschool">High School</option>
+            <option value="associate">Associate's Degree</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="doctorate">Doctorate</option>
+        </select><br><br>
+
+        <!-- Availability to Start -->
+        <label for="start-date">Availability to Start:</label><br>
+        <input type="date" id="start-date" name="start-date" required><br><br>
+
+        <!-- Additional Information -->
+        <label for="additional-info">Additional Information (Optional):</label><br>
+        <textarea id="additional-info" name="additional-info" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+
+</body>
+</html>
