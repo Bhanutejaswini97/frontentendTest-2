@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shadow Border Examples</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .container {
+        width: 220px;
+        margin-bottom: 20px;
+        padding: 10px;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #ddd;
+    }
+    /* Basic Shadow */
+    .basic-shadow {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    /* Inset Shadow */
+    .inset-shadow {
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    /* Soft Glow Shadow */
+    .soft-glow {
+        box-shadow: 0 0 15px rgba(0, 128, 255, 0.5);
+    }
+    /* Multiple Shadows */
+    .multiple-shadows {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(255, 0, 0, 0.2);
+    }
+    /* Outline Shadow */
+    .outline-shadow {
+        box-shadow: 0 0 0 5px rgba(0, 128, 255, 0.5);
+    }
+    /* Hover Shadow Effect */
+    .hover-shadow {
+        transition: box-shadow 0.3s ease;
+    }
+    .hover-shadow:hover {
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+    }
+</style>
+</head>
+<body>
+
+<h1>Shadow Border Examples</h1>
+
+<div class="container basic-shadow">Basic Shadow</div>
+<div class="container inset-shadow">Inset Shadow</div>
+<div class="container soft-glow">Soft Glow Shadow</div>
+<div class="container multiple-shadows">Multiple Shadows</div>
+<div class="container outline-shadow">Outline Shadow</div>
+<div class="container hover-shadow">Hover Shadow (Hover Over Me)</div>
+
+</body>
+</html>

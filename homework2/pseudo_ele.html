@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo-elements Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+    .pseudo-example {
+        font-size: 1.2em;
+        color: #333;
+        width: 80%;
+        max-width: 600px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+        position: relative;
+        line-height: 1.5;
+    }
+    /* ::before pseudo-element */
+    .pseudo-example::before {
+        content: "📘 "; /* Example: Adding an icon or symbol */
+        font-size: 1.5em;
+        color: #0066cc;
+        position: absolute;
+        left: -1.5em;
+        top: 0.2em;
+    }
+    /* ::after pseudo-element */
+    .pseudo-example::after {
+        content: " - The End";
+        font-weight: bold;
+        color: #666;
+        display: block;
+        margin-top: 10px;
+        text-align: right;
+    }
+    /* ::first-letter pseudo-element */
+    .pseudo-example::first-letter {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #0066cc;
+        float: left;
+        margin-right: 5px;
+        line-height: 1;
+    }
+    /* ::first-line pseudo-element */
+    .pseudo-example::first-line {
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+    }
+    /* ::selection pseudo-element */
+    .pseudo-example::selection {
+        background-color: #ffe600;
+        color: #333;
+    }
+</style>
+</head>
+<body>
+
+<div class="pseudo-example">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+</div>
+
+</body>
+</html>
