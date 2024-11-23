@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom CSS Variables</title>
+    <style>
+        
+        :root {
+            --main-color: lightblue; 
+        }
+
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, main {
+            background-color: var(--main-color); 
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            font-size: 1.5rem; 
+        }
+
+        main {
+            font-size: 1rem;
+            padding: 50px 20px;
+        }
+
+        
+        @media (max-width: 768px) {
+            :root {
+                --main-color: lightcoral; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to My Webpage
+    </header>
+    <main>
+        This page demonstrates the use of custom CSS variables for styling.
+        Resize the browser window to see the background color change on smaller screens.
+    </main>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empress</title>
+  <style>
+    /* General Styles */
+
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #fbc2eb, #ff9a9e, #fad0c4, #fbc2eb);
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(90deg, #c33764, #1d2671);
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .header h1 {
+      font-size: 2em;
+      margin: 0;
+      flex: 0; 
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex: 2; 
+    }
+    
+    .nav a {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+    
+    .nav a:hover {
+      color: #ffde7d;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 30px;
+    }
+
+    .home{
+      height: 90vh;
+    }
+
+    .about{
+      height: 90vh;
+    }
+
+    .home, .about, .dresses, .contact {
+      text-align: center;
+      margin-bottom: 20px;
+      
+    }
+
+    .dresses .types {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-top: 20px;
+    }
+
+    .type {
+      
+      max-width: 200px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .type img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .type:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .type img:hover {
+      transform: scale(1.1);
+    }
+
+    .type h3 {
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      color: white;
+      padding: 10px;
+      margin: 0;
+    }
+
+    .type p {
+      padding: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    /* Contact Form */
+    .contact form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left; 
+    }
+    
+    .form-group label {
+      display: block; 
+      margin-bottom: 5px;
+      font-weight: bold;
+      text-align: left; 
+    }
+    
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      padding-right: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: #ff758c;
+      outline: none;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .form-group button:hover {
+      background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .home video{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.5);
+    }
+    
+    .home h2{
+      color: white;
+      font-style: italic;
+      font-weight: bolder;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 70px;
+      padding-top:250px;
+    }
+    .home p{
+      color: white;
+    }
+    .about h2{
+      font-weight: bolder;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 70px;
+      padding-top: 70px;
+    }
+    .dresses{
+      height: 90vh;
+    }
+    .dresses h2{
+      font-weight: bolder;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 70px;
+      padding-top: 70px;
+    }
+    .contact h2{
+      font-weight: bolder;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 70px;
+      padding-top: 70px;
+    }
+  </style>
+</head>
+<body>
+   <header class="header">
+    <a href="#home"><h1>Empress</h1></a>
+    <div class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#dresses">Dresses</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+  
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <video src="bc.mp4" autoPlay loop muted playsInline></video>
+    <h2>Welcome to Empress</h2>
+    <p>Your one-stop destination for exquisite and elegant women's wear.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Empress</h2>
+    <p style="font-family: 'Times New Roman', Times, serif; font-style:italic;font-size:20px;">Made with heart, worn with pride</p>
+    <p style="padding-top: 40px; font-size:25px;font-style:italic">At Empress, we pride ourselves on curating a wide-ranging collection of stylish and elegant attire to suit every preference and occasion. Our offerings span from chic and modern Western dresses that are perfect for casual outings, parties, or a sophisticated evening look, to the timeless charm of classic sarees that embody tradition and grace, ideal for weddings, festive events, and cultural celebrations.
+
+     <br> <br> <br> In addition to these, we cater to those who cherish the allure of bygone eras with our vintage-inspired styles and retro designs, allowing you to make a unique statement. Whether you’re dressing up for a special occasion, updating your everyday wardrobe, or seeking a perfect blend of comfort and elegance, our boutique ensures there’s something to match your style and enhance your confidence. At Women’s Boutique, fashion meets individuality, celebrating you in every outfit!</p>
+  </section>
+
+  <!-- Dresses Section -->
+  <section id="dresses" class="dresses">
+    <h2>Dresses</h2>
+    <div class="types">
+      <div class="type">
+        <img src="west.jfif" alt="Western Wear">
+        <h3>Western Wear</h3>
+        <p>Trendy and modern dresses perfect for casual and party occasions.</p>
+      </div>
+      <div class="type">
+        <img src="trad.jfif" alt="Traditional Wear">
+        <h3>Traditional Wear</h3>
+        <p>Elegant and timeless outfits for weddings and celebrations.</p>
+      </div>
+      <div class="type">
+        <img src="saree.jpg" alt="Sarees">
+        <h3>Sarees</h3>
+        <p>A wide variety of sarees to match your style and preferences.</p>
+      </div>
+      <div class="type">
+        <img src="retro.jfif" alt="Old Trends">
+        <h3>Old Trends</h3>
+        <p>Vintage and retro designs for a classic look.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Women's Boutique. All rights reserved.</p>
+  </footer>
+</body>
+</html>

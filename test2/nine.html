@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlapping Boxes</title>
+    <style>
+        /* Style for the body to enable centering */
+        body {
+            margin: 0;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        
+        .box1 {
+            width: 150px; 
+            height: 150px; 
+            background-color: rgb(116, 162, 163); 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            z-index: 1; 
+        }
+
+        
+        .box2 {
+            width: 100px; 
+            height: 100px; 
+            background-color: hotpink; 
+            position: absolute; 
+            top: calc(50% - 25px); 
+            left: calc(50% - 25px); 
+            transform: translate(-50%, -50%); 
+            z-index: 2; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

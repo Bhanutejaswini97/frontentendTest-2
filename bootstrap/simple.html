@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+        }
+
+        .main-container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+            height:500px;
+        }
+
+        .carousel {
+            height: 100%; 
+            width: 60%; 
+            border: 1px solid #000;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .carousel-images {
+            display: flex;
+            height: 100%;
+            width: 100%; 
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-controls button {
+            border: 1px solid #000;
+            background: none;
+            cursor: pointer;
+        }
+
+        .form-container {
+            width: 40%;
+            border: 1px solid #000;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-container select,
+        .form-container input,
+        .form-container button {
+            border: 1px solid #000;
+            padding: 5px;
+        }
+
+        .customer-experience {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Shop Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <section class="main-container">
+        <!-- Carousel -->
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="watch.webp" alt="Product 1">
+                <img src="earbuds.webp" alt="Product 2">
+                <img src="phone.jfif" alt="Product 3">
+            </div>
+            <div class="carousel-controls">
+                <button id="prev">Prev</button>
+                <button id="next">Next</button>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="form-container">
+            <h2>Product Details</h2>
+            <form>
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <label for="color">Color:</label>
+                <select id="color" name="color">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+
+                <button type="button">Add to Cart</button>
+                <button type="button">Buy Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Customer Experience Section -->
+    <section class="customer-experience">
+        <h2>Customer Experience <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-text-fill" viewBox="0 0 16 16">
+            <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM3.5 3h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1m0 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1m0 2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1"/>
+          </svg></h2>
+        <p>Our customers love our products! We are committed to providing high-quality items and excellent service.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+            <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg>
+        <p>&copy; 2024 Shop. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const images = document.querySelector('.carousel-images');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let index = 0;
+
+        prevButton.addEventListener('click', () => {
+            index = (index > 0) ? index - 1 : 2; // Adjust based on the number of images
+            images.style.transform = `translateX(-${index * 100}%)`;
+        });
+
+        nextButton.addEventListener('click', () => {
+            index = (index < 2) ? index + 1 : 0; // Adjust based on the number of images
+            images.style.transform = `translateX(-${index * 100}%)`;
+        });
+    </script>
+</body>
+</html>
